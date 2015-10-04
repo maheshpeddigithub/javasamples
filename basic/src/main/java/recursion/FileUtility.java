@@ -1,4 +1,4 @@
-package javasamples.recursion;
+package recursion;
 
 
 import java.io.File;
