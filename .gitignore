@@ -1,4 +1,3 @@
 .idea
-javasamples.iml
+*.iml
 target
-basic/basic.iml

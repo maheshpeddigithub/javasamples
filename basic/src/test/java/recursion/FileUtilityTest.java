@@ -17,7 +17,7 @@ public class FileUtilityTest {
 
     @Test
     public void testGetFileCount() {
-        int fileCount = FileUtility.getFileCount(new File(this.getClass().getResource("/dir1").getFile()));
+        int fileCount = FileUtility.getFileCount(new File(this.getClass().getResource("/dir").getFile()));
         assertThat(fileCount, CoreMatchers.is(6));
     }
 
