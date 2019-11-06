@@ -30,14 +30,14 @@ public class ImmutableWithMutableTest {
     @Test
     public void testImmutableWithMutableInitialization() {
         Map<String, String> mutableInner = immutableWithMutable.getMutable();
-        assertThat(1, is(equalTo(mutableInner.size())));
+        assertThat(mutableInner.size(), is(equalTo(1)));
     }
 
     @Test
     public void testImmutableWithMutableAlteringMutable() {
         mutable.put("key2", "value2");
         Map<String, String> mutableInner = immutableWithMutable.getMutable();
-        assertThat(1, is(equalTo(mutableInner.size())));
+        assertThat(mutableInner.size(), is(equalTo(1)));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class ImmutableWithMutableTest {
         assertThat(1, is(equalTo(mutableInner.size())));
         mutableInner.put("key2", "value2");
         mutableInner = immutableWithMutable.getMutable();
-        assertThat(1, is(equalTo(mutableInner.size())));
+        assertThat(mutableInner.size(), is(equalTo(1)));
     }
 
     @After
